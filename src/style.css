@@ -1,131 +1,151 @@
-body {
-  background: linear-gradient(to bottom, #f3f0ff, #f9f7fe);
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #272044;
+/* General Reset and Body Styling */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background: #f0f0fa;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+/* Links */
 a {
-  color: #885df1;
+  color: #665dfe;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #6e3acc;
+  color: #433acc;
 }
 
+/* Container */
 .container {
-  margin: 100px auto;
-  max-width: 600px;
-  padding: 0 20px;
+  max-width: 700px;
+  padding: 20px;
+  margin: auto;
 }
 
+/* Header Styling */
 header {
-  margin-bottom: 30px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 h1 {
-  font-weight: 800;
-  font-size: 36px;
-  line-height: 1.3;
-  color: #272044;
-  background: linear-gradient(45deg, #885df1, #4a31aa);
+  font-weight: 700;
+  font-size: 2.5em;
+  color: #2c2450;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #6a5bf2, #4434bc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
 }
 
+/* Form Container */
 .form-container {
-  background-color: white;
-  margin-bottom: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.1);
-  padding: 20px 30px;
-  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s;
 }
 
 .form-container:hover {
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.2);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.hint {
-  font-size: 12px;
-  opacity: 0.7;
-  color: #726a8a;
-  line-height: 1.4;
-}
-
-.instructions {
-  padding: 16px;
-  border: 1px solid rgba(39, 33, 66, 0.3);
-  width: 100%;
-  font-size: 16px;
-  border-radius: 30px;
-  line-height: 1.5;
-  color: #272044;
-  background-color: #f7f5fc;
-  transition: background-color 0.3s ease;
-}
-
-.instructions:hover {
-  background-color: #ece7ff;
-}
-
-.submit-button {
-  background: linear-gradient(45deg, #885df1, #6e3acc);
-  color: white;
-  border: none;
-  font-size: 16px;
-  border-radius: 30px;
-  padding: 12px 20px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.submit-button:hover {
-  background: linear-gradient(45deg, #6e3acc, #4a31aa);
-}
-
-.poem {
-  font-size: 16px;
-  background-color: #fff;
-  padding: 20px;
-  line-height: 1.8;
-  border-left: 4px solid #885df1;
-  box-shadow: 0px 4px 20px rgba(39, 33, 66, 0.1);
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.poem:hover {
   transform: translateY(-5px);
 }
 
-.poem strong {
-  color: #6e3acc;
+/* Form */
+form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
+/* Input Styling */
+.instructions {
+  flex: 1;
+  padding: 14px;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: border-color 0.3s;
+}
+
+.instructions:focus {
+  border-color: #665dfe;
+  outline: none;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  background: linear-gradient(45deg, #6a5bf2, #4434bc);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: linear-gradient(45deg, #4434bc, #6a5bf2);
+}
+
+/* Hint Text */
+.hint {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Poem Section */
+.poem {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #665dfe;
+  transition: box-shadow 0.3s;
+}
+
+.poem:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.poem strong {
+  color: #4434bc;
+  font-weight: 600;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  font-size: 13px;
-  color: #726a8a;
+  font-size: 14px;
+  color: #777;
   margin-top: 40px;
 }
 
+/* Generating Animation */
 .generating {
-  animation: blink-animation 1s steps(5, start) infinite;
+  animation: fade-in 1.5s ease-in-out infinite;
 }
 
-@keyframes blink-animation {
-  50% {
-    opacity: 0;
-  }
+@keyframes fade-in {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
